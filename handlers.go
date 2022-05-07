@@ -8,7 +8,12 @@ import (
 )
 
 func homePage(c *gin.Context) {
-	c.HTML(http.StatusOK, "templates/index.html", gin.H{"title": "Home Page"})
+	c.HTML(
+		http.StatusOK,
+		"index.html",
+		gin.H{
+			"title": "Home Page"},
+	)
 }
 
 // getAlbums возвращает список всех альбомов в формате JSON.

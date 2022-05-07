@@ -8,6 +8,8 @@ func main() {
 	// Инициализируете роутер Gin, используя Default.
 	router := gin.Default()
 
+	router.LoadHTMLGlob("templates/*")
+
 	router.GET("/", homePage)
 	// Используете функцию GET, чтобы связать метод GET HTTP и путь /albums с функцией обработчика.
 	router.GET("/albums", getAlbums)
