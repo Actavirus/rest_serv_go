@@ -7,6 +7,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func homePage(c *gin.Context) {
+	c.HTML(http.StatusOK, "templates/index.html", gin.H{"title": "Home Page"})
+}
+
 // getAlbums возвращает список всех альбомов в формате JSON.
 func getAlbums(c *gin.Context) {
 	// Вызовете Context.IndentedJSON, чтобы сериализовать структуру в JSON и добавить ее в ответ.
